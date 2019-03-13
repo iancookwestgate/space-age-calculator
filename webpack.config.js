@@ -9,28 +9,52 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
+
   devtool: 'eval-source-map',
   devServer: {
     contentBase: './dist'
   },
+
   plugins: [
-   new UglifyJsPlugin({ sourceMap: true }),
-   new CleanWebpackPlugin(['dist']),
-   new HtmlWebpackPlugin({
-     title: 'Project Title',
-     template: './src/index.html',
-     inject: 'body'
-   })
- ],
+    new UglifyJsPlugin({ sourceMap: true }),
+    new CleanWebpackPlugin(['dist']),
+    new HtmlWebpackPlugin({
+      title: 'Project Title',
+      template: './src/index.html',
+      inject: 'body'
+    })
+  ],
+
   module: {
     rules: [
       {
-        test: /\.css$/,
+        test: /\.scss$/,
         use: [
           'style-loader',
-          'css-loader'
+          'css-loader',
+          'sass-loader'
         ]
       },
+      {
+        test: /\.(gif|png|jpe?g)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'assets/images/'
+            }
+          }
+        ]
+      },
+      {
+        test: /\.html$/,
+        loader: 'html-srcsets-loader',
+        options: {
+          attrs: ['img:src', ':srcset'],
+        },
+      },
+
       {
         test: /\.js$/,
         exclude: /node_modules/,
