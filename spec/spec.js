@@ -1,5 +1,4 @@
 import { processAge } from './../src/main.js';
-import { findAge } from './../src/main.js';
 
 describe('Space Age Calculations', function() {
   let inputStuff;
@@ -27,10 +26,10 @@ describe('Space Age Calculations', function() {
   });
   it("should determine how many years a user has left to live on a planet", function() {
     let ageDiff = (70-(Math.round((inputStuff.age)/1.88)));
-    expect(marsAge).toEqual(17.5531914893617);
+    expect(ageDiff).toEqual(52);
   });
-  // it("if user surpassed life expectancy, it should determine how many years they went beyond that total", function() {
-  //   let marsAge = ((inputStuff.age)/1.88);
-  //   expect(marsAge).toEqual(17.5531914893617);
-  // });
+  it("if user surpassed life expectancy, it should determine how many years they went beyond that total", function() {
+    let ageSurp = ((Math.round((inputStuff.age)/.24))-70);
+    expect(ageSurp).toEqual(68);
+  });
 });
