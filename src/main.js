@@ -36,9 +36,11 @@ export class processAge {
 
 $(document).ready(function() {
   $("button").click(function() {
-    let userAge = ($("#input").val());
-    let userPlanet = ($("select").val());
-    let userStuff = new processAge(userAge, userPlanet);
+    
+    const userAge = ($("#input").val());
+
+    const userPlanet = ($("select").val());
+    const userStuff = new processAge(userAge, userPlanet);
     if (userPlanet==="Mercury"){
       userStuff.mercuryAge();
     } else if (userPlanet==="Venus"){
@@ -51,16 +53,16 @@ $(document).ready(function() {
       alert("You need to select a planet!");
     }
 
-    let initialInput = userStuff.age;
+    const initialInput = userStuff.age;
 
     if (userStuff.age < 70) {
       let ageDiff = 70-userStuff.age;
-      $(".output2").text("Wow, you would have " + ageDiff + " years left to live!")
+      $(".output2").text("Wow, you would have " + ageDiff + " years left to live given a life expectancy of 70 years old!")
     }
 
     if (userStuff.age >= 70) {
       let ageDiff = userStuff.age-70;
-      $(".output2").text("Impressive! You lived " + ageDiff + " years past the planet's life expectancy!")
+      $(".output2").text("Impressive! You lived " + ageDiff + " years past the planet's life expectancy at 70!")
     }
 
 

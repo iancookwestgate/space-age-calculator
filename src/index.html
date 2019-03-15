@@ -9,6 +9,32 @@
       <h1>Space Age Calculator</h1>
       <p> Input your age.</p>
       <input id="input" type="text" name="age" value="">
+      <p>Enter your birthday</p>
+      <div class="formGrouping">
+        <label for="year">Year</label>
+        <input id="year" class="fromRun" type="number" required>
+      </div>
+      <div class="formGrouping">
+        <label for "month">Month</label>
+        <select id="month" name="month">
+          <option id = "January" value="January">January</option>
+          <option id = "Feburary" value="Feburary">Feburary</option>
+          <option id = "March" value="March">March</option>
+          <option id = "April" value="April">April</option>
+          <option id = "May" value="May" >May</option>
+          <option id = "June" value="June">June</option>
+          <option id = "July" value="July">July</option>
+          <option id = "August" value="August">August</option>
+          <option id = "September" value="September">September</option>
+          <option id = "October" value="October">October</option>
+          <option id = "November" value="November">November</option>
+          <option id = "December" value="December">December</option>
+        </select>
+      </div>
+      <div class="formGrouping">
+        <label for "day">Day</label>
+        <input id="day" class="formRun" type="number" required>
+      </div>
       <p>Select your planet</p>
         <select name="planetForm">
          <option></option>
@@ -20,7 +46,7 @@
       <br><br>
       <button class="submit" type="submit" name="button">Submit</button>
       <div class="output"></div>
-      <br><br>
+      <br>
       <div class="output2"></div>
     </div>
   </body>
