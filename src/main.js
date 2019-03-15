@@ -3,37 +3,53 @@ import 'bootstrap';
 import 'bootstrap/scss/bootstrap.scss';
 import './scss/styles.scss';
 
+// Mercury = age/ .24
+// Venus = age / .62
+// Mars = age / 1.88
+// Jupiter = age / 11.86
+
+
 export class processAge {
   constructor(age, planet) {
     this.age = age,
     this.planet = planet
  }
- // determinePlanet() {
- //   if (planet="Mars") {
- //     console.log(userPlanet);
- //     marsAge(age);
- //   }
- // }
- // marsAge() {
- //   let martianAge = (age/1.88);
- //   return martianAge;
- // }
+ mercuryAge() {
+   this.age = this.age/.24;
+   return this.age;
+ }
+ venusAge() {
+   this.age = this.age/.62;
+   return this.age;
+ }
+ marsAge() {
+   this.age = this.age/1.88;
+   return this.age;
+ }
+ jupiterAge() {
+   this.age = this.age/11.86;
+   return this.age;
+ }
 }
 
 
 
-// age / .24 = Mercury
-// age / .62 = venus
-// age / 1.88 = mars
-// age / 11.86 = jupiter
+
 
 $(document).ready(function() {
   $("button").click(function() {
     let userAge = ($("#input").val());
     let userPlanet = ($("select").val());
-    const userStuff = new processAge(userAge, userPlanet);
+    let userStuff = new processAge(userAge, userPlanet);
+    if(userPlanet="Mars"){
+      userStuff.marsAge();
+    }
     console.log(userStuff);
+
+
     // determinePlanet(userStuff.planet);
-    $(".output").text(userAge + " " + userPlanet);
+    // $(".output").text(userStuff(this.age));
   })
 });
+
+// userAge + " " + userPlanet
