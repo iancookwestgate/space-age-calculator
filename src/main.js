@@ -3,10 +3,6 @@ import 'bootstrap';
 import 'bootstrap/scss/bootstrap.scss';
 import './scss/styles.scss';
 
-// Mercury = age/ .24
-// Venus = age / .62
-// Mars = age / 1.88
-// Jupiter = age / 11.86
 
 
 export class processAge {
@@ -57,22 +53,19 @@ $(document).ready(function() {
 
     let initialInput = userStuff.age;
 
-    if (userStuff.age <= 70) {
-      if (userPlanet==="Mercury"){
-      } else if (userPlanet==="Venus"){
-        userStuff.venusAge();
-      } else if (userPlanet==="Mars"){
-        userStuff.marsAge();
-      } else if (userPlanet==="Jupiter"){
-        userStuff.jupiterAge();
-      } else {
-        alert("Error!");
-      }
-    } else {
+    if (userStuff.age < 70) {
+      let ageDiff = 70-userStuff.age;
+      $(".output2").text("Wow, you would have " + ageDiff + " years left to live!")
+    }
 
+    if (userStuff.age >= 70) {
+      let ageDiff = userStuff.age-70;
+      $(".output2").text("Impressive! You lived " + ageDiff + " years past the planet's life expectancy!")
     }
 
 
+
     $(".output").text("You would be " + initialInput + " years old if you lived on " + userPlanet + "!");
+
   })
 });
