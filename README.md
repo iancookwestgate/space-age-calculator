@@ -1,4 +1,4 @@
-# Project Title
+# Space Age Calculator
 
 #### Epicodus JavaScript exercise, Date
 
