@@ -1,38 +1,36 @@
 import { processAge } from './../src/main.js';
+import { findAge } from './../src/main.js';
 
 describe('Space Age Calculations', function() {
   let inputStuff;
 
   beforeEach(function() {
-    let userInput = [25, "Mars"];
+    let userInput = [33, "Mars"];
     inputStuff = new processAge(userInput[0], userInput[1]);
   });
 
-  it("should equate the user's age", function(){
-    expect(inputStuff.age).toEqual(25);
+  it("should calculate the user's age in Mercury years", function() {
+    let mercuryAge = Math.round((inputStuff.age)/.24);
+    expect(mercuryAge).toEqual(138);
   });
-  it('should reveal the planet the user chose', function() {
-    expect(inputStuff.planet).toEqual("Mars");
+  it("should calculate the user's age in Venus years", function() {
+    let venusAge = Math.round((inputStuff.age)/.62);
+    expect(venusAge).toEqual(53);
   });
   it("should calculate the user's age in Mars years", function() {
-    let marsAge = ((inputStuff.age)/1.88);
-    expect(marsAge).toEqual(13.297872340425533);
+    let marsAge = Math.round((inputStuff.age)/1.88);
+    expect(marsAge).toEqual(18);
   });
-  // it("should calculate how many years the user has left to live on Mars", function() {
+  it("should calculate the user's age in Jupiter years", function() {
+    let jupiterAge = Math.round((inputStuff.age)/11.86);
+    expect(jupiterAge).toEqual(3);
+  });
+  it("should determine how many years a user has left to live on a planet", function() {
+    let ageDiff = (70-(Math.round((inputStuff.age)/1.88)));
+    expect(marsAge).toEqual(17.5531914893617);
+  });
+  // it("if user surpassed life expectancy, it should determine how many years they went beyond that total", function() {
   //   let marsAge = ((inputStuff.age)/1.88);
-  //   let marsExpectancy = (inputStuff.lifeExpect/1.88);
-  //   let marsRemainder = (marsExpectancy - marsAge);
-  //   expect(marsRemainder).toEqual(23.93617021276596);
-  // });
-
-  // beforeEach(function() {
-  //   let userInput = [40, 70, "Mars"];
-  //   inputStuff = new processAge(userInput[0], userInput[1], userInput[2]);
-  // });
-  //
-  // it("should return how many years the user has exceeded life expectancy on Mars", function() {
-  //   let marsAge = ((inputStuff.age)*1.88);
-  //   let marsExpectancy = (inputStuff.lifeExpect);
-  //   let marsOverflow =
+  //   expect(marsAge).toEqual(17.5531914893617);
   // });
 });

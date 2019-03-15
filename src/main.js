@@ -3,8 +3,6 @@ import 'bootstrap';
 import 'bootstrap/scss/bootstrap.scss';
 import './scss/styles.scss';
 
-
-
 export class findAge {
   constructor(birthday){
     this.birthday = birthday;
@@ -18,7 +16,7 @@ export class findAge {
       age--;
     }
     return age;
-    }
+  }
 }
 
 export class processAge {
@@ -44,10 +42,6 @@ export class processAge {
   }
 }
 
-
-
-
-
 $(document).ready(function() {
   $("button").click(function() {
     const year = $("#year").val();
@@ -69,22 +63,15 @@ $(document).ready(function() {
     } else {
       alert("You need to select a planet!");
     }
-
     const initialInput = userStuff.age;
-
     if (userStuff.age < 70) {
       let ageDiff = 70-userStuff.age;
       $(".output2").text("Wow, you would have " + ageDiff + " years left to live given a life expectancy of 70 years old!")
     }
-
     if (userStuff.age >= 70) {
       let ageDiff = userStuff.age-70;
       $(".output2").text("Impressive! You lived " + ageDiff + " years past the planet's life expectancy at 70!")
     }
-
-
-
     $(".output").text("You would be " + initialInput + " years old if you lived on " + userPlanet + "!");
-
   })
 });
