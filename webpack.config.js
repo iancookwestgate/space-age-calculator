@@ -19,7 +19,7 @@ module.exports = {
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
     new HtmlWebpackPlugin({
-      title: 'Project Title',
+      title: 'space-age-calculator',
       template: './src/index.html',
       inject: 'body'
     })

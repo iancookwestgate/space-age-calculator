@@ -10,7 +10,7 @@ export class processAge {
     this.planet = planet
  }
 
- thisAge() {
-   
- }
+ // thisAge() {
+ //
+ // }
 }

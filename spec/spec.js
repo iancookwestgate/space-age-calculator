@@ -8,7 +8,7 @@ describe('Space Age Calculations', function() {
   });
 
   it("should equate the user's age", function(){
-    expect(inputStuff.thisAge()).toEqual(25);
+    expect(inputStuff.age).toEqual(25);
   })
   it("should reveal the user's life expectancy", function() {
     expect(inputStuff.lifeExpect).toEqual(70);
