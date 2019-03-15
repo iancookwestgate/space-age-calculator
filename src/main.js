@@ -56,8 +56,7 @@ $(document).ready(function() {
     const birthday = `${year}-${month}-${day}`;
     const yourBirthday = new findAge(birthday);
     const userAge = Math.round(yourBirthday.findAge());
-
-    const userPlanet = ($("select").val());
+    const userPlanet = ($("#planetary").val());
     const userStuff = new processAge(userAge, userPlanet);
     if (userPlanet==="Mercury"){
       userStuff.mercuryAge();
