@@ -4,39 +4,15 @@
 
 ## Description
 
----
+This Space Age Calculator is an exercise assigned by Epicodus to translate a user's age into Mercury, Venus, Mars, and Jupiter years. It will also determine how many years a user may have left to live or, alternatively, how many years they would have lived past life expectancy if they had been born on the planet of their choice of the options above.
 
-## Planning
-
-1. Configuration/dependencies
-  * This should include ALL dependencies.
-  * It should also include WHERE they are defined and used in the project
-  * It could include a short description of what each does for you
-
-2. Specs
+## Specs
   * Spec 1: | Return the user's age in Mercury years | Input: "25" | Output: "6" |
   * Spec 2: | Return the user's age in Venus years | Input: "25" | Output: "15.5" |
   * Spec 3: | Return the user's age in Mars years | Input: "25" | Output: "47" |
   * Spec 4: | Return their age in Jupiter years | Input: "25" | Output: "296.5" |
   * Spec 5: | Determine how many years a user has left to live on each planet. | Input: "Age: 25, Life Expectancy: 70, Planet Selection: Mars" | Output: "You have 23 years left to live on Mars." |
   * Spec 6: | If user already exceeds life expectancy for the planet, return how long they have lived past it. | Input: "Age: 40, Life Expectancy: 70, Planet Selection: Mars" | Output: "You have lived 5.2 years past your life expectancy on Mars." |
-
-3. Integration
-  * Initial routes or index pages with all dependencies in Controller/index.html head
-  * Template/html page for ...
-  * Template/html page for ...
-  * Template/html page for ... (one for each route/integrated user story)
-  * Display...
-  * Integrate feature that...
-
-4. UX/UI
-  * Include and modify bootstrap/materialize/Sass etc.
-  * Develop custom style
-
-5. Polish
-  * Refactor minor portion of...
-  * Delete unused...
-  * Make README awesome
 
 ## Setup
 
@@ -67,9 +43,7 @@
 * Karma
 
 ## Known Bugs
-* GH-Pages: When loaded through gh-pages, three of the images (FiveThirtyEight's Logo, ABC News' Logo, and the popularity chart) do not appear to work correctly despite working fine and connecting properly when loaded from a cloned repo.
-
-* README: The images within the README sometimes appear next to text instead of below it, disrupting the visual clarity.
+* There are no known bugs at this time.
 
 ## Support and contact details
 
