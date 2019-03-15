@@ -1,8 +1,8 @@
 {
-  "name": "project-name-here",
+  "name": "Space Age Calculator",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "build": "webpack --mode development",
     "start": "npm run build; webpack-dev-server --open --mode development",
