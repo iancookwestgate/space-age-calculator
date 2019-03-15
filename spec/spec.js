@@ -17,12 +17,13 @@ describe('Space Age Calculations', function() {
     expect(inputStuff.planet).toEqual("Mars");
   });
   it("should calculate the user's age in Mars years", function() {
-    let marsAge = ((inputStuff.age)*.24);
-    expect(marsAge).toEqual(6);
+    let marsAge = ((inputStuff.age)*1.88);
+    expect(marsAge).toEqual(47);
   });
   it("should calculate how many years the user has left to live on Mars", function() {
-    let marsAge = ((inputStuff.age)*.24);
+    let marsAge = ((inputStuff.age)*1.88);
     let marsExpectancy = (inputStuff.lifeExpect);
-    expect(mercuryAge).toEqual(6);
+    let marsRemainder = (marsExpectancy - marsAge);
+    expect(marsRemainder).toEqual(23);
   });
 });

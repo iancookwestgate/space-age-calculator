@@ -18,7 +18,7 @@
   * Spec 2: | Return the user's age in Venus years | Input: "25" | Output: "15.5" |
   * Spec 3: | Return the user's age in Mars years | Input: "25" | Output: "47" |
   * Spec 4: | Return their age in Jupiter years | Input: "25" | Output: "296.5" |
-  * Spec 5: | Determine how many years a user has left to live on each planet. | Input: "Age: 25, Life Expectancy: 70, Planet Selection: Mars" | Output: "You have 13 years left to live on Mars." |
+  * Spec 5: | Determine how many years a user has left to live on each planet. | Input: "Age: 25, Life Expectancy: 70, Planet Selection: Mars" | Output: "You have 23 years left to live on Mars." |
   * Spec 6: | If user already exceeds life expectancy for the planet, return how long they have lived past it. | Input: "Age: 40, Life Expectancy: 70, Planet Selection: Mars" | Output: "You have lived 5.2 years past your life expectancy on Mars." |
 
 3. Integration
