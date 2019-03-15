@@ -5,6 +5,22 @@ import './scss/styles.scss';
 
 
 
+export class findAge {
+  constructor(birthday){
+    this.birthday = birthday;
+  }
+  findAge() {
+    let today = new Date();
+    let birthday = new Date (this.birthday);
+    let age = today.getFullYear() - birthday.getFullYear();
+    let m = today.getMonth() - birthday.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthday.getDate())) {
+      age--;
+    }
+    return age;
+    }
+}
+
 export class processAge {
   constructor(age, planet) {
     this.age = age,
@@ -26,8 +42,6 @@ export class processAge {
    this.age = this.age/11.86;
    return this.age;
   }
-
-
 }
 
 
@@ -36,8 +50,12 @@ export class processAge {
 
 $(document).ready(function() {
   $("button").click(function() {
-    
-    const userAge = ($("#input").val());
+    const year = $("#year").val();
+    const month = $("#month").val();
+    const day = $("#day").val();
+    const birthday = `${year}-${month}-${day}`;
+    const yourBirthday = new findAge(birthday);
+    const userAge = Math.round(yourBirthday.findAge());
 
     const userPlanet = ($("select").val());
     const userStuff = new processAge(userAge, userPlanet);
