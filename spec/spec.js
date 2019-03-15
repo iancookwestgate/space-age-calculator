@@ -9,11 +9,20 @@ describe('Space Age Calculations', function() {
 
   it("should equate the user's age", function(){
     expect(inputStuff.age).toEqual(25);
-  })
+  });
   it("should reveal the user's life expectancy", function() {
     expect(inputStuff.lifeExpect).toEqual(70);
-  })
+  });
   it('should reveal the planet the user chose', function() {
     expect(inputStuff.planet).toEqual("Mars");
+  });
+  it("should calculate the user's age in Mars years", function() {
+    let marsAge = ((inputStuff.age)*.24);
+    expect(marsAge).toEqual(6);
+  });
+  it("should calculate how many years the user has left to live on Mars", function() {
+    let marsAge = ((inputStuff.age)*.24);
+    let marsExpectancy = (inputStuff.lifeExpect);
+    expect(mercuryAge).toEqual(6);
   });
 });
