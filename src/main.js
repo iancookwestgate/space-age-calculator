@@ -41,14 +41,22 @@ $(document).ready(function() {
     let userAge = ($("#input").val());
     let userPlanet = ($("select").val());
     let userStuff = new processAge(userAge, userPlanet);
-    if(userPlanet="Mars"){
+    if (userPlanet==="Mercury"){
+      userStuff.mercuryAge();
+    } else if (userPlanet==="Venus"){
+      userStuff.venusAge();
+    } else if (userPlanet==="Mars"){
       userStuff.marsAge();
+    } else if (userPlanet==="Jupiter"){
+      userStuff.jupiterAge();
+    } else {
+      alert("You need to select a planet!");
     }
-    console.log(userStuff);
 
-
+    let finishedInput = userStuff.age;
+    console.log(finishedInput);
     // determinePlanet(userStuff.planet);
-    // $(".output").text(userStuff(this.age));
+    $(".output").text("You would be " + finishedInput + " years old if you lived on " + userPlanet + "!");
   })
 });
 
