@@ -8,7 +8,13 @@ export class processAge {
     this.age = age,
     this.planet = planet
  }
- // marsAge(age) {
+ // determinePlanet() {
+ //   if (planet="Mars") {
+ //     console.log(userPlanet);
+ //     marsAge(age);
+ //   }
+ // }
+ // marsAge() {
  //   let martianAge = (age/1.88);
  //   return martianAge;
  // }

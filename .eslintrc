@@ -16,6 +16,9 @@
       "indent": ["warn", 2],
       "no-console": "warn",
       "no-debugger": "warn",
-      "no-unused-vars": "warn"
+      "no-unused-vars": "warn",
+      "no-undef": "warn",
+      "no-cond-assign": "warn",
+      "no-constant-condition": "warn"
   }
 }
