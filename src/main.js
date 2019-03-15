@@ -4,9 +4,8 @@ import 'bootstrap/scss/bootstrap.scss';
 import './scss/styles.scss';
 
 export class processAge {
-  constructor(age, lifeExpect, planet) {
+  constructor(age, planet) {
     this.age = age,
-    this.lifeExpect = lifeExpect,
     this.planet = planet
  }
  // marsAge() {
@@ -21,8 +20,9 @@ export class processAge {
 
 $(document).ready(function() {
   $("button").click(function() {
-    let userPlanet = ($("#input").val());
-    // let martianAge = userStuff.age;
-    $(".output").text(userPlanet);
+    let userAge = ($("#input").val());
+    let userPlanet = ($("select").val());
+    console.log(userPlanet);
+    $(".output").text(userAge + " " + userPlanet);
   })
 });
