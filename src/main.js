@@ -3,6 +3,14 @@ import 'bootstrap';
 import 'bootstrap/scss/bootstrap.scss';
 import './scss/styles.scss';
 
-$(document).ready(function() {
-  console.log("hey, you should buy Abe a beer sometime!");
-});
+export class processAge {
+  constructor(age, lifeExpect, planet) {
+    this.age = age,
+    this.lifeExpect = lifeExpect,
+    this.planet = planet
+ }
+
+ thisAge() {
+   
+ }
+}
