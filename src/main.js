@@ -13,23 +13,25 @@ export class processAge {
   constructor(age, planet) {
     this.age = age,
     this.planet = planet
- }
- mercuryAge() {
+  }
+  mercuryAge() {
    this.age = this.age/.24;
    return this.age;
- }
- venusAge() {
+  }
+  venusAge() {
    this.age = this.age/.62;
    return this.age;
- }
- marsAge() {
+  }
+  marsAge() {
    this.age = this.age/1.88;
    return this.age;
- }
- jupiterAge() {
+  }
+  jupiterAge() {
    this.age = this.age/11.86;
    return this.age;
- }
+  }
+
+
 }
 
 
@@ -53,11 +55,24 @@ $(document).ready(function() {
       alert("You need to select a planet!");
     }
 
-    let finishedInput = userStuff.age;
-    console.log(finishedInput);
-    // determinePlanet(userStuff.planet);
-    $(".output").text("You would be " + finishedInput + " years old if you lived on " + userPlanet + "!");
+    let initialInput = userStuff.age;
+
+    if (userStuff.age <= 70) {
+      if (userPlanet==="Mercury"){
+      } else if (userPlanet==="Venus"){
+        userStuff.venusAge();
+      } else if (userPlanet==="Mars"){
+        userStuff.marsAge();
+      } else if (userPlanet==="Jupiter"){
+        userStuff.jupiterAge();
+      } else {
+        alert("Error!");
+      }
+    } else {
+
+    }
+
+
+    $(".output").text("You would be " + initialInput + " years old if you lived on " + userPlanet + "!");
   })
 });
-
-// userAge + " " + userPlanet
