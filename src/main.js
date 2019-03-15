@@ -9,23 +9,20 @@ export class processAge {
     this.lifeExpect = lifeExpect,
     this.planet = planet
  }
-
-
-
- // thisAge() {
+ // marsAge() {
  //
  // }
 }
 
+// age / .24 = Mercury
+// age / .62 = venus
+// age / 1.88 = mars
+// age / 11.86 = jupiter
+
 $(document).ready(function() {
   $("button").click(function() {
-    let userInput = ($("#input").val().split(",")).map(Number);
-
-    // calculating age only
-    let userStuff = new processAge(userInput[0], userInput[1], userInput[2]);
-    console.log(userStuff);
-    let martianAge = userStuff.age;
-    $(".output").text(martianAge);
-
+    let userPlanet = ($("#input").val());
+    // let martianAge = userStuff.age;
+    $(".output").text(userPlanet);
   })
 });

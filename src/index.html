@@ -7,10 +7,18 @@
   <body>
     <div class="container">
       <h1>Space Age Calculator</h1>
-      <p> Input your age, life expectancy, and planet of choice from (Mercury, Venus, Mars, Jupiter) like so: "25, 70, Mars"</p>
+      <p> Input your age.</p>
       <input id="input" type="text" name="age" value="">
-      <button class="submit" type="submit" name="button">Calculate age</button>
-      <br>
+      <p>Select your planet</p>
+        <select name="planetForm">
+         <option></option>
+         <option id="mercury">Mercury</option>
+         <option id="venus">Venus</option>
+         <option id="mars">Mars</option>
+         <option id="jupiter">Jupiter</option>
+        </select>
+      <br><br>
+      <button class="submit" type="submit" name="button">Submit</button>
       <div class="output"></div>
     </div>
   </body>
